@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore top-notch milks, dairies, fashion apparel, pet foods, and fresh fruits. Everything you need, all in one place at Nest.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="Images/Logo.svg">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Nest</title>
+</head>
+<body>
+    <div class="Nest-Container">
+        <section class="section-one" id="section-one">
+            <header class="header container mx-auto w-full flex items-center justify-between p-container">
+                <div class="logo">
+                    <a class="flex items-center text-5xl font-extrabold text-green" href="#section-one">
+                        <img class="mr-2" src="Images/Logo.svg" alt=""">
+                        <h1>Nest</h1>
+                    </a>
+                </div>
+                <div class="search relative">
+                    <input class="px-4 py-1 text-lg font-semibold rounded-full" type="search" placeholder="Search For Items">
+                    <a><i class='bx bx-search cursor-pointer text-2xl text-gray absolute top-1/2 right-3.5'></i></a>
+                </div>
+                <div class="navbar">
+                    <ul class="navlist flex items-center">
+                        <li>
+                            <a class="flex items-center text-lg font-semibold" href="#">
+                                <i class='bx bx-cart-alt text-2xl mr-1 text-main' ></i>
+                                <h3>My Cart</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center text-lg font-semibold" href="#">
+                                <i class='bx bx-user mr-1 text-2xl text-main'></i>
+                                <h3>My Account</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <header class="header-two container mx-auto w-full flex items-center justify-between p-container">
+                <div class="header-dropdown relative inline-block">
+                    <button onclick="myFunction()" class="header-dropbtn flex items-center justify-between cursor-pointer text-lg text-white">
+                        <i class='bx bxs-widget mr-1'></i>
+                        <h3 id="categoryText">Categories</h3>
+                        <i id="chevronIcon" class='bx bx-chevron-down ml-1 text-3xl'></i>
+                    </button>
+                    <div id="myHeaderDropdown" class="header-dropdown-content absolute z-40 text-center shadow">
+                        <a class="block p-2 cursor-pointer" onclick="updateCategory('Milks & Dairies')">Milks & Dairies</a>
+                        <a class="block p-2 cursor-pointer" onclick="updateCategory('Baking material')">Baking material</a>
+                        <a class="block p-2 cursor-pointer" onclick="updateCategory('Pet Foods')">Pet Foods</a>
+                        <a class="block p-2 cursor-pointer" onclick="updateCategory('Fresh Fruit')">Fresh Fruit</a>                        
+                    </div>
+                </div>
+                <div class="navbar-two">
+                    <ul class="navlist-two flex items-center">
+                        <li>
+                            <a href="#" class="text-green px-2 py-1 text-lg font-bold">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-main px-2 py-1 text-lg font-bold">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-main px-2 py-1 text-lg font-bold">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-main px-2 py-1 text-lg font-bold">Support</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-main px-2 py-1 text-lg font-bold">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="support-center flex items-center">
+                    <i class='bx bx-support text-4xl cursor-pointer text-main mr-4'></i>
+                    <div class="support-center-text flex flex-col items-center">
+                        <div class="support-number">
+                            <h3 class="text-green text-3xl font-bold">1900 - 888</h3>
+                        </div>
+                        <div class="support-p text-main text-lg font-semibold">
+                            <p>24/7 Support Center</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="section-one-content container mx-auto p-container swiper">
+                <div class="swiper-wrapper">
+                    <div class="section-one-image flex justify-center items-center relative swiper-slide">
+                        <img src="Images/SectionOne(2).jpg" class="object-cover object-center w-full h-full" alt="">
+                        <div class="section-one-text absolute z-30">
+                            <h1 class="text-6xl font-extrabold text-main">
+                                Fresh Vegetables <br> Big Discount
+                            </h1>
+                            <p class="mt-8 text-2xl font-bold text-main">Save up to 50% off on your first order.</p>
+                            <div class="section-one-input flex flex-col relative">
+                                <i class='bx bx-send text-2xl absolute cursor-pointer'></i>
+                                <input class="my-8 pl-10 rounded-md" type="email" placeholder="Your Emaill Address">
+                                <button class="text-white text-lg font-bold rounded-md" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-one-image flex justify-center items-center relative swiper-slide">
+                        <img src="Images/SectionOne(1).jpg" class="object-cover object-center w-full h-full" alt="">
+                        <div class="section-one-text absolute z-30">
+                            <h1 class="text-6xl font-extrabold text-main">
+                                Don’t Miss Amazing <br> Grocery Deals
+                            </h1>
+                            <p class="mt-8 text-2xl font-bold text-main">Sign up for the daily newsletter.</p>
+                            <div class="section-one-input flex flex-col relative">
+                                <i class='bx bx-send text-2xl absolute cursor-pointer'></i>
+                                <input class="my-8 pl-10 rounded-md" type="email" placeholder="Your Emaill Address">
+                                <button class="text-white text-lg font-bold rounded-md" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-one-image flex justify-center items-center relative swiper-slide">
+                        <img src="Images/SectionOne(3).jpg" class="object-cover object-center w-full h-full" alt="">
+                        <div class="section-one-text absolute z-30">
+                            <h1 class="text-6xl font-extrabold text-white">
+                                60% Friday Discount 
+                            </h1>
+                            <p class="mt-8 text-2xl font-bold text-white">60% Discount on your first order.</p>
+                            <div class="section-one-input flex flex-col relative">
+                                <i class='bx bx-send text-2xl absolute cursor-pointer'></i>
+                                <input class="my-8 pl-10 rounded-md" type="email" placeholder="Your Emaill Address">
+                                <button class="text-white text-lg font-bold rounded-md" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="section-one-grid container mx-auto p-container">
+                <div class="section-one-grid-box">
+                    <div class="section-one-grid-box-image relative">
+                        <img src="Images/SectionOne(4).jpg" alt="">
+                        <div class="section-one-grid-box-text absolute">
+                            <h2 class="text-2xl font-bold text-main">Everyday Fresh & <br> Clean with Our <br> Products</h2>
+                            <br>
+                            <br>
+                            <a class="btn-shape text-white text-lg font-bold " href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-one-grid-box">
+                    <div class="section-one-grid-box-image relative">
+                        <img src="Images/SectionOne(5).jpg" alt="">
+                        <div class="section-one-grid-box-text absolute">
+                            <h2 class="text-2xl font-bold text-main">Make your Breakfast <br> Healthy and Easy</h2>
+                            <br>
+                            <br>
+                            <a class="btn-shape text-white text-lg font-bold " href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-one-grid-box">
+                    <div class="section-one-grid-box-image relative">
+                        <img src="Images/SectionOne(6).jpg" alt="">
+                        <div class="section-one-grid-box-text absolute">
+                            <h2 class="text-2xl font-bold text-main">The best Organic <br> Products Online</h2>
+                            <br>
+                            <br>
+                            <a class="btn-shape text-white text-lg font-bold " href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-products container mx-auto p-container-2">
+                <div class="flex justify-between items-center">
+                    <h1 class="popular-titleTop text-4xl font-bold">Popular Products</h1>
+                    <div class="popular-navbar">
+                        <ul class="flex items-center tabs">
+                            <li>
+                                <a class="text-xl font-bold px-4 cursor-pointer">All</a>
+                            </li>
+                            <li data-content=".ulOnee">
+                                <a class="ulTwo text-xl font-bold px-4 cursor-pointer">Milks & Dairies</a>
+                            </li>
+                            <li data-content=".ulTwoo">
+                                <a class="text-xl font-bold px-4 cursor-pointer">Coffes & Teas</a>
+                            </li>
+                            <li data-content=".ulThreee">
+                                <a class="ulFour text-xl font-bold px-4 cursor-pointer">Pet Foods</a>
+                            </li>
+                            <li data-content=".ulFourr">
+                                <a class="ulFive text-xl font-bold px-4 cursor-pointer">Vegetables</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popular-grid content">
+                    <div class="popular-box relative rounded-md text-center flex items-center flex-col ulOnee">
+                        <div class="popular-big-sale absolute">
+                            <h3 class="text-white">-25%</h3>
+                        </div>
+                        <div class="popular-image mt-4">
+                            <img src="Images/Proudct1.svg" alt="">
+                        </div>
+                        <div class="popular-title mb-1">
+                            <h2 class="text-lg font-bold text-main">Seeds of Change <br> Organic Quinoe</h2>
+                        </div>
+                        <div class="popular-stars flex items-center mb-1">
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bx-star text-main' ></i>
+                            <div class="popular-rate pl-1">
+                                <h3 class="text-lg te">(4.0)</h3>
+                            </div>
+                        </div>
+                        <div class="popular-by mb-2">
+                            <h3 class="text-main text-lg font-semibold">by <span class="text-green text-xl font-bold">NestFood</span></h3>
+                        </div>
+                        <div class="popular-details flex items-center justify-between gap-3">
+                            <div class="popular-price">
+                                <h3 class="text-xl font-bold text-green">$28.85</h3>
+                            </div>
+                            <div class="popular-cart flex items-center bg-green-100 text-green gap-1 cursor-pointer hover:bg-green-200">
+                                <i class='bx bx-cart text-2xl'></i>
+                                <h3 class="text-xl">Add</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-box relative rounded-md text-center flex items-center flex-col ulTwoo">
+                        <div class="popular-sale absolute">
+                            <h3 class="text-white">Sale</h3>
+                        </div>
+                        <div class="popular-image mt-4">
+                            <img src="Images/Proudct2.svg" alt="">
+                        </div>
+                        <div class="popular-title mb-1">
+                            <h2 class="text-lg font-bold text-main">All Natural Italian-Style <br> Chicken Meatballs</h2>
+                        </div>
+                        <div class="popular-stars flex items-center mb-1">
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bx-star text-main' ></i>
+                            <i class='bx bx-star text-main' ></i>
+                            <div class="popular-rate pl-1">
+                                <h3 class="text-lg te">(3.0)</h3>
+                            </div>
+                        </div>
+                        <div class="popular-by mb-2">
+                            <h3 class="text-main text-lg font-semibold">by <span class="text-green text-xl font-bold">Stouffer</span></h3>
+                        </div>
+                        <div class="popular-details flex items-center justify-between gap-3">
+                            <div class="popular-price">
+                                <h3 class="text-xl font-bold text-green">$52.85</h3>
+                            </div>
+                            <div class="popular-cart flex items-center bg-green-100 text-green gap-1 cursor-pointer hover:bg-green-200">
+                                <i class='bx bx-cart text-2xl'></i>
+                                <h3 class="text-xl">Add</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-box relative rounded-md text-center flex items-center flex-col ulThreee">
+                        <div class="popular-new absolute">
+                            <h3 class="text-white">New</h3>
+                        </div>
+                        <div class="popular-image mt-4">
+                            <img src="Images/Proudct3.svg" alt="">
+                        </div>
+                        <div class="popular-title mb-1">
+                            <h2 class="text-lg font-bold text-main">Angie’s Boomchickapop <br> Sweet & Salty</h2>
+                        </div>
+                        <div class="popular-stars flex items-center mb-1">
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star-half text-yellow-400'></i>
+                            <div class="popular-rate pl-1">
+                                <h3 class="text-lg te">(4.5)</h3>
+                            </div>
+                        </div>
+                        <div class="popular-by mb-2">
+                            <h3 class="text-main text-lg font-semibold">by <span class="text-green text-xl font-bold">StarKist</span></h3>
+                        </div>
+                        <div class="popular-details flex items-center justify-between gap-3">
+                            <div class="popular-price">
+                                <h3 class="text-xl font-bold text-green">$48.85</h3>
+                            </div>
+                            <div class="popular-cart flex items-center bg-green-100 text-green gap-1 cursor-pointer hover:bg-green-200">
+                                <i class='bx bx-cart text-2xl'></i>
+                                <h3 class="text-xl">Add</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-box relative rounded-md text-center flex items-center flex-col ulTwoo">
+                        <div class="popular-image mt-4">
+                            <img src="Images/Proudct4.svg" alt="">
+                        </div>
+                        <div class="popular-title mb-1">
+                            <h2 class="text-lg font-bold text-main">Foster Farms Takeout <br> Crispy Classic</h2>
+                        </div>
+                        <div class="popular-stars flex items-center mb-1">
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bx-star text-main' ></i>
+                            <div class="popular-rate pl-1">
+                                <h3 class="text-lg te">(4.0)</h3>
+                            </div>
+                        </div>
+                        <div class="popular-by mb-2">
+                            <h3 class="text-main text-lg font-semibold">by <span class="text-green text-xl font-bold">NestFood</span></h3>
+                        </div>
+                        <div class="popular-details flex items-center justify-between gap-3">
+                            <div class="popular-price">
+                                <h3 class="text-xl font-bold text-green">$17.85</h3>
+                            </div>
+                            <div class="popular-cart flex items-center bg-green-100 text-green gap-1 cursor-pointer hover:bg-green-200">
+                                <i class='bx bx-cart text-2xl'></i>
+                                <h3 class="text-xl">Add</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-box relative rounded-md text-center flex items-center flex-col ulOnee">
+                        <div class="popular-big-sale absolute">
+                            <h3 class="text-white">-35%</h3>
+                        </div>
+                        <div class="popular-image mt-4">
+                            <img src="Images/Proudct5.svg" alt="">
+                        </div>
+                        <div class="popular-title mb-1">
+                            <h2 class="text-lg font-bold text-main">Blue Diamond Almonds <br> Lightly</h2>
+                        </div>
+                        <div class="popular-stars flex items-center mb-1">
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bx-star text-main' ></i>
+                            <div class="popular-rate pl-1">
+                                <h3 class="text-lg te">(4.0)</h3>
+                            </div>
+                        </div>
+                        <div class="popular-by mb-2">
+                            <h3 class="text-main text-lg font-semibold">by <span class="text-green text-xl font-bold">NestFood</span></h3>
+                        </div>
+                        <div class="popular-details flex items-center justify-between gap-3">
+                            <div class="popular-price">
+                                <h3 class="text-xl font-bold text-green">$23.85</h3>
+                            </div>
+                            <div class="popular-cart flex items-center bg-green-100 text-green gap-1 cursor-pointer hover:bg-green-200">
+                                <i class='bx bx-cart text-2xl'></i>
+                                <h3 class="text-xl">Add</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-box relative rounded-md text-center flex items-center flex-col ulThreee">
+                        <div class="popular-new absolute">
+                            <h3 class="text-white">New</h3>
+                        </div>
+                        <div class="popular-image mt-4">
+                            <img src="Images/Proudct6.svg" alt="">
+                        </div>
+                        <div class="popular-title mb-1">
+                            <h2 class="text-lg font-bold text-main">Seeds of Change <br> Organic Quinoe</h2>
+                        </div>
+                        <div class="popular-stars flex items-center mb-1">
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <div class="popular-rate pl-1">
+                                <h3 class="text-lg te">(5.0)</h3>
+                            </div>
+                        </div>
+                        <div class="popular-by mb-2">
+                            <h3 class="text-main text-lg font-semibold">by <span class="text-green text-xl font-bold">NestFood</span></h3>
+                        </div>
+                        <div class="popular-details flex items-center justify-between gap-3">
+                            <div class="popular-price">
+                                <h3 class="text-xl font-bold text-green">$54.85</h3>
+                            </div>
+                            <div class="popular-cart flex items-center bg-green-100 text-green gap-1 cursor-pointer hover:bg-green-200">
+                                <i class='bx bx-cart text-2xl'></i>
+                                <h3 class="text-xl">Add</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-box relative rounded-md text-center flex items-center flex-col ulOnee">
+                        <div class="popular-image mt-4">
+                            <img src="Images/Proudct7.svg" alt="">
+                        </div>
+                        <div class="popular-title mb-1">
+                            <h2 class="text-lg font-bold text-main">Canada Dry Ginger <br> 2 L Bottle</h2>
+                        </div>
+                        <div class="popular-stars flex items-center mb-1">
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bx-star text-main' ></i>
+                            <div class="popular-rate pl-1">
+                                <h3 class="text-lg te">(4.0)</h3>
+                            </div>
+                        </div>
+                        <div class="popular-by mb-2">
+                            <h3 class="text-main text-lg font-semibold">by <span class="text-green text-xl font-bold">Tyson</span></h3>
+                        </div>
+                        <div class="popular-details flex items-center justify-between gap-3">
+                            <div class="popular-price">
+                                <h3 class="text-xl font-bold text-green">$32.85</h3>
+                            </div>
+                            <div class="popular-cart flex items-center bg-green-100 text-green gap-1 cursor-pointer hover:bg-green-200">
+                                <i class='bx bx-cart text-2xl'></i>
+                                <h3 class="text-xl">Add</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-box relative rounded-md text-center flex items-center flex-col ulFourr">
+                        <div class="popular-sale absolute">
+                            <h3 class="text-white">Sale</h3>
+                        </div>
+                        <div class="popular-image mt-4">
+                            <img src="Images/Proudct8.svg" alt="">
+                        </div>
+                        <div class="popular-title mb-1">
+                            <h2 class="text-lg font-bold text-main">Encore Seafoods <br> Stuffed Alaskan</h2>
+                        </div>
+                        <div class="popular-stars flex items-center mb-1">
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bx-star text-main' ></i>
+                            <div class="popular-rate pl-1">
+                                <h3 class="text-lg te">(4.0)</h3>
+                            </div>
+                        </div>
+                        <div class="popular-by mb-2">
+                            <h3 class="text-main text-lg font-semibold">by <span class="text-green text-xl font-bold">Paso</span></h3>
+                        </div>
+                        <div class="popular-details flex items-center justify-between gap-3">
+                            <div class="popular-price">
+                                <h3 class="text-xl font-bold text-green">$25.85</h3>
+                            </div>
+                            <div class="popular-cart flex items-center bg-green-100 text-green gap-1 cursor-pointer hover:bg-green-200">
+                                <i class='bx bx-cart text-2xl'></i>
+                                <h3 class="text-xl">Add</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-box relative rounded-md text-center flex items-center flex-col ulFourr">
+                        <div class="popular-image mt-4">
+                            <img src="Images/Proudct9.svg" alt="">
+                        </div>
+                        <div class="popular-title mb-1">
+                            <h2 class="text-lg font-bold text-main">Gorton’s Beer Battered <br> Fish Fillets</h2>
+                        </div>
+                        <div class="popular-stars flex items-center mb-1">
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bx-star text-main' ></i>
+                            <i class='bx bx-star text-main' ></i>
+                            <i class='bx bx-star text-main' ></i>
+                            <div class="popular-rate pl-1">
+                                <h3 class="text-lg te">(2.0)</h3>
+                            </div>
+                        </div>
+                        <div class="popular-by mb-2">
+                            <h3 class="text-main text-lg font-semibold">by <span class="text-green text-xl font-bold">Old El Paso</span></h3>
+                        </div>
+                        <div class="popular-details flex items-center justify-between gap-3">
+                            <div class="popular-price">
+                                <h3 class="text-xl font-bold text-green">$13.50</h3>
+                            </div>
+                            <div class="popular-cart flex items-center bg-green-100 text-green gap-1 cursor-pointer hover:bg-green-200">
+                                <i class='bx bx-cart text-2xl'></i>
+                                <h3 class="text-xl">Add</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-box relative rounded-md text-center flex items-center flex-col ulFourr">
+                        <div class="popular-big-sale absolute">
+                            <h3 class="text-white">-45%</h3>
+                        </div>
+                        <div class="popular-image mt-4">
+                            <img src="Images/Proudct10.svg" alt="">
+                        </div>
+                        <div class="popular-title mb-1">
+                            <h2 class="text-lg font-bold text-main">Haagen-Dazs Caramel <br> Cone Ice Cream</h2>
+                        </div>
+                        <div class="popular-stars flex items-center mb-1">
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <i class='bx bxs-star text-lg text-yellow-400'></i>
+                            <div class="popular-rate pl-1">
+                                <h3 class="text-lg te">(5.0)</h3>
+                            </div>
+                        </div>
+                        <div class="popular-by mb-2">
+                            <h3 class="text-main text-lg font-semibold">by <span class="text-green text-xl font-bold">Tyson</span></h3>
+                        </div>
+                        <div class="popular-details flex items-center justify-between gap-3">
+                            <div class="popular-price">
+                                <h3 class="text-xl font-bold text-green">$20.00</h3>
+                            </div>
+                            <div class="popular-cart flex items-center bg-green-100 text-green gap-1 cursor-pointer hover:bg-green-200">
+                                <i class='bx bx-cart text-2xl'></i>
+                                <h3 class="text-xl">Add</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>
